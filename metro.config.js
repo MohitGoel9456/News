@@ -1,12 +1,9 @@
-const { getDefaultConfig, mergeConfig } = require('@react-native/metro-config');
-
 /**
- * Metro configuration
- * https://facebook.github.io/metro/docs/configuration
+ * Metro configuration for React Native
+ * https://github.com/facebook/react-native
  *
- * @type {import('metro-config').MetroConfig}
+ * @format
  */
-// const config = {};
 
 module.exports = {
     transformer: {
