@@ -44,6 +44,15 @@ export const NewsReducer = (state = initialState, action: any): NewsState => {
                 loading: false,
                 error: action.payload,
             };
+        case HOME_ACTIONS.FETCH_NEWS_FROM_DB:
+            return {
+                ...state,
+                loading: false,
+                news: {
+                    ...state.news,
+                    articles: [...action.payload, ...state.news.articles]
+                }
+            };
         default:
             return state;
     }

@@ -15,6 +15,21 @@ const getData = async (key: string): Promise<StorageResponse> => {
     }
 };
 
+const getTop5ValuesFromDb = async (key: string): Promise<StorageResponse> => {
+    try {
+        const data = await AsyncStorage.getItem(key);
+        if (data) {
+            const parsedArray = JSON.parse(data);
+            const top5Values = parsedArray.slice(0, 5);
+            saveData('articles', parsedArray.slice(5));
+            return top5Values;
+        }
+        return { data: null, error: 'Data not found.' };
+    } catch (error) {
+        return { data: null, error: 'Error retrieving data from storage.' };
+    }
+}
+
 const saveData = async (key: string, data: any): Promise<void> => {
     try {
         const jsonValue = JSON.stringify(data);
@@ -27,5 +42,6 @@ const saveData = async (key: string, data: any): Promise<void> => {
 
 export {
     getData,
-    saveData
+    saveData,
+    getTop5ValuesFromDb
 }
