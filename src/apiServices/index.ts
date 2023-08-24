@@ -1,9 +1,9 @@
 import axios, { AxiosInstance, AxiosResponse, InternalAxiosRequestConfig } from 'axios';
-import { BASE_URL } from './constants';
+import { apiConfig } from './constants';
 import { Header } from './header';
 
 const ApiService: AxiosInstance = axios.create({
-    baseURL: BASE_URL,
+    baseURL: apiConfig.BASE_URL,
     headers: Header(),
     timeout: 5000,
 })

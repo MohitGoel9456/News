@@ -19,10 +19,8 @@ import {
 import SplashScreen from 'react-native-splash-screen';
 
 import StackNavigator from './src/navigation';
-
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
+import store from 'store/index';
+import { Provider } from 'react-redux'
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -37,9 +35,11 @@ function App(): JSX.Element {
   };
 
   return (
-    <SafeAreaView style={[backgroundStyle, styles.container]}>
-      <StackNavigator />
-    </SafeAreaView>
+    <Provider store={store}>
+      <SafeAreaView style={[backgroundStyle, styles.container]}>
+        <StackNavigator />
+      </SafeAreaView>
+    </Provider>
   );
 }
 

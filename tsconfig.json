@@ -7,13 +7,10 @@
       "@components/*": [
         "components/*"
       ],
-      "@services/*": [
-        "services/*"
-      ],
       "@assets/*": [
         "assets/*"
       ],
-      "@apiService/*": [
+      "@apiServices/*": [
         "apiServices/*"
       ],
       "@navigation/*": [
