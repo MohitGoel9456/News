@@ -21,3 +21,8 @@ export interface NewsState {
     error: string
     news: News
 }
+
+export interface StorageResponse {
+    data: any | null;
+    error: string | null;
+}

@@ -2,7 +2,7 @@ import { AppDispatch } from '..';
 import { fetchNewsApi } from 'services/apiServices/newsApi';
 import { News } from 'types/news';
 import { HOME_ACTIONS } from './actionTypes';
-
+import { saveData } from 'services/storageServices';
 // Define action creators
 export const fetchNewsRequest = () => ({
     type: HOME_ACTIONS.FETCH_NEWS_REQUEST,
@@ -26,8 +26,10 @@ export const fetchNews = () => {
             const newsData = await fetchNewsApi();
             const finalData: News = {
                 ...newsData,
-                articles: newsData.articles.slice(0, 9),
+                articles: newsData.articles.slice(0, 29),
             };
+            const result = await saveData('articles', newsData.articles.slice(30, 99));
+            console.log("result --", result);
             dispatch(fetchNewsSuccess(finalData));
         } catch (error) {
             dispatch(fetchNewsFailure(error.message || 'An error occurred'));
