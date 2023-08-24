@@ -1,5 +1,5 @@
 import { AppDispatch } from '..';
-import { fetchNewsApi } from 'apiServices/newsApi';
+import { fetchNewsApi } from 'services/apiServices/newsApi';
 import { News } from 'types/news';
 import { HOME_ACTIONS } from './actionTypes';
 

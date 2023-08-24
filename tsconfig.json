@@ -10,8 +10,8 @@
       "@assets/*": [
         "assets/*"
       ],
-      "@apiServices/*": [
-        "apiServices/*"
+      "@services/*": [
+        "services/*"
       ],
       "@navigation/*": [
         "navigation/*"
