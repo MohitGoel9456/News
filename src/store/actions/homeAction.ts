@@ -24,7 +24,11 @@ export const fetchNews = () => {
         dispatch(fetchNewsRequest());
         try {
             const newsData = await fetchNewsApi();
-            dispatch(fetchNewsSuccess(newsData));
+            const finalData: News = {
+                ...newsData,
+                articles: newsData.articles.slice(0, 9),
+            };
+            dispatch(fetchNewsSuccess(finalData));
         } catch (error) {
             dispatch(fetchNewsFailure(error.message || 'An error occurred'));
         }

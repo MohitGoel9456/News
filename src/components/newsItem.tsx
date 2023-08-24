@@ -1,36 +1,52 @@
 import React from 'react';
 import {
+    View,
     Image,
     Text,
     StyleSheet
 } from 'react-native';
+import { Article } from 'types/news';
+import Card from './card';
+import news from "assets/images/news.png";
 
-const NewsItem = () => {
+interface NewsItem {
+    article: Article
+}
+
+const NewsItem = (props: NewsItem) => {
+    const { title, urlToImage, publishedAt } = props.article;
+
+    var date = new Date(publishedAt);
+    const publishedDate = date.toString().slice(3, 15);
+
+    const imageUrl = urlToImage == null ? news : { uri: urlToImage };
+
     return (
         <>
-            <Image
-                style={styles.tinyLogo}
-                source={{
-                    uri: 'https://reactnative.dev/img/tiny_logo.png',
-                }}
-            />
-            <Text>title</Text>
-            <Text>Published</Text>
+            <Card>
+                <Image
+                    style={styles.tinyLogo}
+                    source={imageUrl}
+                />
+                <View style={styles.container}>
+                    <Text style={styles.textMargin}>{title}</Text>
+                    <Text style={styles.textMargin}>{publishedDate}</Text>
+                </View>
+            </Card>
         </>
     )
 }
 
 const styles = StyleSheet.create({
     container: {
-        paddingTop: 50,
+        padding: 12,
     },
     tinyLogo: {
-        width: 50,
-        height: 50,
+        width: '100%',
+        height: 150,
     },
-    logo: {
-        width: 66,
-        height: 58,
+    textMargin: {
+        marginTop: 4
     },
 });
 

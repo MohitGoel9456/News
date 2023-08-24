@@ -1,18 +1,18 @@
+export interface Article {
+    author: string,
+    title: string,
+    description: string,
+    url: string,
+    urlToImage: string,
+    source: {
+        id: string,
+        name: string
+    },
+    publishedAt: string
+}
+
 export interface News {
-    articles: [
-        {
-            author: string,
-            title: string,
-            description: string,
-            url: string,
-            urlToImage: string,
-            source: {
-                id: string,
-                name: string
-            },
-            publishedAt: string
-        }
-    ],
+    articles: Article[],
     status: string
 }
 
