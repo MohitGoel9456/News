@@ -21,14 +21,11 @@ const HomeScreen: React.FC = () => {
     const { news } = apiResponse;
 
     const dripTimerRef = useRef();
-    // const flatListRef = useRef(null);
-    // const scrollPositionRef = useRef(0);
 
     const fetchNextBatch = async () => {
         dispatch(fetchTop5FromDB());
     };
 
-    console.log("news --", news.articles.length);
     //used to fetch news from api for the very first time
     useEffect(() => {
         if (news?.articles.length == 1 || news.articles.length == 100)
@@ -48,7 +45,7 @@ const HomeScreen: React.FC = () => {
                 clearInterval(dripTimerRef.current); // Clear the timer when the component unmounts
             }
         };
-    })
+    }, [])
 
     //
     useEffect(() => {
@@ -56,15 +53,6 @@ const HomeScreen: React.FC = () => {
             setRefreshing(false);
     }, [news])
 
-    // useEffect(() => {
-    //     if (flatListRef.current) {
-    //         flatListRef.current.scrollToOffset({ offset: scrollPositionRef.current, animated: false });
-    //     }
-    // }, [news]);
-
-    // const handleScroll = (event: any) => {
-    //     scrollPositionRef.current = event.nativeEvent.contentOffset.y;
-    // };
 
     const onRefresh = () => {
         setRefreshing(true);

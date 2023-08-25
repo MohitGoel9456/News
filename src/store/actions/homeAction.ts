@@ -1,8 +1,9 @@
 import { AppDispatch } from '..';
-import { fetchNewsApi } from 'services/apiServices/newsApi';
 import { Article, News } from 'types/news';
 import { HOME_ACTIONS } from './actionTypes';
-import { getTop5ValuesFromDb, saveData } from 'services/storageServices';
+import { getTopNewsFromDb } from 'services/storageServices';
+import { ifNoInternetConnectionReturnDataFromDB } from 'middleware/middleware';
+
 // Define action creators
 export const fetchNewsRequest = () => ({
     type: HOME_ACTIONS.FETCH_NEWS_REQUEST,
@@ -29,13 +30,7 @@ export const fetchNews = () => {
     return async (dispatch: AppDispatch) => {
         dispatch(fetchNewsRequest());
         try {
-            const newsData = await fetchNewsApi();
-            const finalData: News = {
-                ...newsData,
-                articles: newsData.articles.slice(0, 10),
-            };
-            const result = await saveData('articles', newsData.articles.slice(10));
-            console.log("result --", result);
+            const finalData = await ifNoInternetConnectionReturnDataFromDB();
             dispatch(fetchNewsSuccess(finalData));
         } catch (error) {
             dispatch(fetchNewsFailure(error.message || 'An error occurred'));
@@ -43,10 +38,12 @@ export const fetchNews = () => {
     };
 };
 
+
+
 export const fetchTop5FromDB = () => {
     return async (dispatch: AppDispatch) => {
         try {
-            const storedHeadlines = await getTop5ValuesFromDb('articles');
+            const storedHeadlines = await getTopNewsFromDb('articles');
             dispatch(fetchTopHeadlinesFormDB(storedHeadlines));
         }
         catch (error) {

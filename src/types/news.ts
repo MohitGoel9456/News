@@ -23,6 +23,6 @@ export interface NewsState {
 }
 
 export interface StorageResponse {
-    data: any | null;
+    data: Article | null;
     error: string | null;
 }
