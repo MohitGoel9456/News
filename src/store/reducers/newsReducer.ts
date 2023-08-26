@@ -5,20 +5,7 @@ const initialState: NewsState = {
     loading: false,
     error: '',
     news: {
-        articles: [
-            {
-                author: '',
-                title: '',
-                description: '',
-                url: '',
-                urlToImage: '',
-                source: {
-                    id: '',
-                    name: ''
-                },
-                publishedAt: ''
-            }
-        ],
+        articles: [],
         status: ''
     },
 };

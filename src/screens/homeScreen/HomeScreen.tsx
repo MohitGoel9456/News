@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import {
     View,
-    Text,
     FlatList,
-    RefreshControl
+    RefreshControl,
+    ActivityIndicator,
+    StyleSheet
 } from 'react-native';
 import { useAppDispatch, useAppSelector } from "store/index";
 import { RootState } from "store/reducers";
@@ -18,17 +19,18 @@ const HomeScreen: React.FC = () => {
 
     const dispatch = useAppDispatch();
     const apiResponse = useAppSelector((state: RootState) => state.news);
-    const { news } = apiResponse;
+    const { news, loading } = apiResponse;
 
     const dripTimerRef = useRef();
 
+    //fetch top 5 news from Db
     const fetchNextBatch = async () => {
         dispatch(fetchTop5FromDB());
     };
 
     //used to fetch news from api for the very first time
     useEffect(() => {
-        if (news?.articles.length == 1 || news.articles.length == 100)
+        if (news?.articles.length == 0 || news.articles.length == 100)
             dispatch(fetchNews());
     }, [news])
 
@@ -66,7 +68,14 @@ const HomeScreen: React.FC = () => {
         )
     }
     return (
-        <View>
+        <>
+            {loading ?
+                <View style={[styles.container, styles.horizontal]}>
+                    <ActivityIndicator />
+                </View>
+                :
+                null
+            }
             <FlatList
                 data={news.articles}
                 renderItem={renderItem}
@@ -77,8 +86,20 @@ const HomeScreen: React.FC = () => {
                     />
                 }
             />
-        </View>
+        </>
     )
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+    },
+    horizontal: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        padding: 10,
+    },
+})
 
 export default HomeScreen;

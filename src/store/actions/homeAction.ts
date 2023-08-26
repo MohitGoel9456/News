@@ -26,7 +26,6 @@ export const fetchTopHeadlinesFormDB = (articles: Article[]) => ({
 
 // Define async action using Redux Thunk
 export const fetchNews = () => {
-    console.log("news -- fatch news");
     return async (dispatch: AppDispatch) => {
         dispatch(fetchNewsRequest());
         try {
