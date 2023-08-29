@@ -4,8 +4,11 @@ import {
     FlatList,
     RefreshControl,
     ActivityIndicator,
-    StyleSheet
+    StyleSheet,
+    Animated,
 } from 'react-native';
+import Swipeable from 'react-native-gesture-handler/Swipeable';
+import { RectButton, GestureHandlerRootView } from 'react-native-gesture-handler';
 import { useAppDispatch, useAppSelector } from "store/index";
 import { RootState } from "store/reducers";
 import { fetchNews, fetchTop5FromDB } from "store/actions/homeAction";
@@ -20,7 +23,6 @@ const HomeScreen: React.FC = () => {
     const dispatch = useAppDispatch();
     const apiResponse = useAppSelector((state: RootState) => state.news);
     const { news, loading } = apiResponse;
-
     const dripTimerRef = useRef();
 
     //fetch top 5 news from Db
@@ -41,7 +43,7 @@ const HomeScreen: React.FC = () => {
         }
         dripTimerRef.current = setInterval(() => {
             fetchNextBatch();
-        }, 10000);
+        }, 100000);
         return () => {
             if (dripTimerRef.current) {
                 clearInterval(dripTimerRef.current); // Clear the timer when the component unmounts
@@ -49,7 +51,7 @@ const HomeScreen: React.FC = () => {
         };
     }, [])
 
-    //
+    //used for pull to refresh
     useEffect(() => {
         if (refreshing)
             setRefreshing(false);
@@ -62,13 +64,55 @@ const HomeScreen: React.FC = () => {
         clearInterval(dripTimerRef.current);
     };
 
+    const onPressPinMenu = () => {
+
+    }
+
+    const renderRightActions = (progress, dragX) => {
+        const trans = dragX.interpolate({
+            inputRange: [0, 120],
+            outputRange: [-0, 0],
+            extrapolate: 'clamp',
+        });
+        return (
+            <View>
+                <RectButton style={styles.leftAction} onPress={onPressPinMenu}>
+                    <Animated.Text
+                        style={[
+                            styles.actionText,
+                            {
+                                transform: [{ translateX: trans }],
+                            },
+                        ]}>
+                        Pin
+                    </Animated.Text>
+                </RectButton>
+                <RectButton style={styles.deleteAction} >
+                    <Animated.Text
+                        style={[
+                            styles.actionText,
+                            {
+                                transform: [{ translateX: trans }],
+                            },
+                        ]}>
+                        Delete
+                    </Animated.Text>
+                </RectButton>
+            </View>
+
+        );
+    };
+
     const renderItem = ({ item }: { item: Article }) => {
         return (
-            <NewsItem article={item} />
+            <Swipeable renderRightActions={renderRightActions}>
+                <NewsItem article={item} />
+            </Swipeable>
         )
     }
+
     return (
-        <>
+        <GestureHandlerRootView>
             {loading ?
                 <View style={[styles.container, styles.horizontal]}>
                     <ActivityIndicator />
@@ -86,7 +130,7 @@ const HomeScreen: React.FC = () => {
                     />
                 }
             />
-        </>
+        </GestureHandlerRootView>
     )
 }
 
@@ -99,6 +143,27 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-around',
         padding: 10,
+    },
+    leftAction: {
+        flex: 1,
+        backgroundColor: '#497AFC',
+        justifyContent: 'center',
+    },
+    actionText: {
+        color: 'white',
+        fontSize: 16,
+        backgroundColor: 'transparent',
+        padding: 10,
+    },
+    rightAction: {
+        alignItems: 'center',
+        flex: 1,
+        justifyContent: 'center',
+    },
+    deleteAction: {
+        flex: 1,
+        backgroundColor: 'red',
+        justifyContent: 'center',
     },
 })
 

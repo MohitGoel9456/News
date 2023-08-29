@@ -8,14 +8,17 @@ MERGED from /Users/mohitgoel/Projects/Mobile/News1/News/android/app/src/main/And
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.182.0] /Users/mohitgoel/.gradle/caches/transforms-3/e57c5578d81e6017b62457f886450b89/transformed/jetified-flipper-network-plugin-0.182.0/AndroidManifest.xml:8:1-15:12
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.182.0] /Users/mohitgoel/.gradle/caches/transforms-3/9f7906cc9d017be5062b3cc9098ca694/transformed/jetified-flipper-fresco-plugin-0.182.0/AndroidManifest.xml:8:1-15:12
 MERGED from [com.facebook.flipper:flipper:0.182.0] /Users/mohitgoel/.gradle/caches/transforms-3/716e957ae9593c5dfc3048f0ec5b4668/transformed/jetified-flipper-0.182.0/AndroidManifest.xml:8:1-18:12
+MERGED from [:react-native-async-storage_async-storage] /Users/mohitgoel/Projects/Mobile/News1/News/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-community_netinfo] /Users/mohitgoel/Projects/Mobile/News1/News/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-10:12
 MERGED from [:react-native-config] /Users/mohitgoel/Projects/Mobile/News1/News/node_modules/react-native-config/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-gesture-handler] /Users/mohitgoel/Projects/Mobile/News1/News/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-safe-area-context] /Users/mohitgoel/Projects/Mobile/News1/News/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-screens] /Users/mohitgoel/Projects/Mobile/News1/News/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-splash-screen] /Users/mohitgoel/Projects/Mobile/News1/News/node_modules/react-native-splash-screen/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [com.facebook.react:react-android:0.72.4] /Users/mohitgoel/.gradle/caches/transforms-3/69711d27eef08f54fa564886f21ff976/transformed/jetified-react-android-0.72.4-debug/AndroidManifest.xml:2:1-7:12
 MERGED from [com.facebook.react:hermes-android:0.72.4] /Users/mohitgoel/.gradle/caches/transforms-3/a485444f06a054f308e3493468e7f00a/transformed/jetified-hermes-android-0.72.4-debug/AndroidManifest.xml:2:1-7:12
 MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.5.0] /Users/mohitgoel/.gradle/caches/transforms-3/a8738d7f5e7bbb6a9009a8607fd29472/transformed/jetified-imagepipeline-okhttp3-2.5.0/AndroidManifest.xml:2:1-9:12
-MERGED from [androidx.core:core-ktx:1.5.0] /Users/mohitgoel/.gradle/caches/transforms-3/359a9d8d13d22a0c198fd9c3c681a135/transformed/jetified-core-ktx-1.5.0/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.core:core-ktx:1.6.0] /Users/mohitgoel/.gradle/caches/transforms-3/6f32f8a0f8f254934c12251435244a1a/transformed/jetified-core-ktx-1.6.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.android.ndk.thirdparty:openssl:1.1.1l-beta-1] /Users/mohitgoel/.gradle/caches/transforms-3/83da7755b02254113d31a3478ef0a954/transformed/jetified-openssl-1.1.1l-beta-1/AndroidManifest.xml:1:1-3:12
 MERGED from [com.facebook.fbjni:fbjni:0.3.0] /Users/mohitgoel/.gradle/caches/transforms-3/67fa42c0d40c092460eee86c1e70737f/transformed/jetified-fbjni-0.3.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:flipper:2.6.0] /Users/mohitgoel/.gradle/caches/transforms-3/dc23994f18466885379d69865098cdb7/transformed/jetified-flipper-2.6.0/AndroidManifest.xml:2:1-9:12
@@ -175,8 +178,14 @@ MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.182.0] /Users/mohitgoe
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.182.0] /Users/mohitgoel/.gradle/caches/transforms-3/9f7906cc9d017be5062b3cc9098ca694/transformed/jetified-flipper-fresco-plugin-0.182.0/AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper:0.182.0] /Users/mohitgoel/.gradle/caches/transforms-3/716e957ae9593c5dfc3048f0ec5b4668/transformed/jetified-flipper-0.182.0/AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper:0.182.0] /Users/mohitgoel/.gradle/caches/transforms-3/716e957ae9593c5dfc3048f0ec5b4668/transformed/jetified-flipper-0.182.0/AndroidManifest.xml:11:5-13:41
+MERGED from [:react-native-async-storage_async-storage] /Users/mohitgoel/Projects/Mobile/News1/News/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:react-native-async-storage_async-storage] /Users/mohitgoel/Projects/Mobile/News1/News/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:react-native-community_netinfo] /Users/mohitgoel/Projects/Mobile/News1/News/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:react-native-community_netinfo] /Users/mohitgoel/Projects/Mobile/News1/News/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:react-native-config] /Users/mohitgoel/Projects/Mobile/News1/News/node_modules/react-native-config/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:react-native-config] /Users/mohitgoel/Projects/Mobile/News1/News/node_modules/react-native-config/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:react-native-gesture-handler] /Users/mohitgoel/Projects/Mobile/News1/News/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:react-native-gesture-handler] /Users/mohitgoel/Projects/Mobile/News1/News/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:react-native-safe-area-context] /Users/mohitgoel/Projects/Mobile/News1/News/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:react-native-safe-area-context] /Users/mohitgoel/Projects/Mobile/News1/News/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:react-native-screens] /Users/mohitgoel/Projects/Mobile/News1/News/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
@@ -189,8 +198,8 @@ MERGED from [com.facebook.react:hermes-android:0.72.4] /Users/mohitgoel/.gradle/
 MERGED from [com.facebook.react:hermes-android:0.72.4] /Users/mohitgoel/.gradle/caches/transforms-3/a485444f06a054f308e3493468e7f00a/transformed/jetified-hermes-android-0.72.4-debug/AndroidManifest.xml:5:5-44
 MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.5.0] /Users/mohitgoel/.gradle/caches/transforms-3/a8738d7f5e7bbb6a9009a8607fd29472/transformed/jetified-imagepipeline-okhttp3-2.5.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.5.0] /Users/mohitgoel/.gradle/caches/transforms-3/a8738d7f5e7bbb6a9009a8607fd29472/transformed/jetified-imagepipeline-okhttp3-2.5.0/AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.core:core-ktx:1.5.0] /Users/mohitgoel/.gradle/caches/transforms-3/359a9d8d13d22a0c198fd9c3c681a135/transformed/jetified-core-ktx-1.5.0/AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.core:core-ktx:1.5.0] /Users/mohitgoel/.gradle/caches/transforms-3/359a9d8d13d22a0c198fd9c3c681a135/transformed/jetified-core-ktx-1.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.6.0] /Users/mohitgoel/.gradle/caches/transforms-3/6f32f8a0f8f254934c12251435244a1a/transformed/jetified-core-ktx-1.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.6.0] /Users/mohitgoel/.gradle/caches/transforms-3/6f32f8a0f8f254934c12251435244a1a/transformed/jetified-core-ktx-1.6.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.ndk.thirdparty:openssl:1.1.1l-beta-1] /Users/mohitgoel/.gradle/caches/transforms-3/83da7755b02254113d31a3478ef0a954/transformed/jetified-openssl-1.1.1l-beta-1/AndroidManifest.xml:2:2-70
 MERGED from [com.android.ndk.thirdparty:openssl:1.1.1l-beta-1] /Users/mohitgoel/.gradle/caches/transforms-3/83da7755b02254113d31a3478ef0a954/transformed/jetified-openssl-1.1.1l-beta-1/AndroidManifest.xml:2:2-70
 MERGED from [com.facebook.fbjni:fbjni:0.3.0] /Users/mohitgoel/.gradle/caches/transforms-3/67fa42c0d40c092460eee86c1e70737f/transformed/jetified-fbjni-0.3.0/AndroidManifest.xml:5:5-7:41
@@ -323,8 +332,14 @@ ADDED from /Users/mohitgoel/Projects/Mobile/News1/News/android/app/src/debug/And
 		ADDED from /Users/mohitgoel/Projects/Mobile/News1/News/android/app/src/debug/AndroidManifest.xml:11:19-83
 uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from [com.facebook.flipper:flipper:0.182.0] /Users/mohitgoel/.gradle/caches/transforms-3/716e957ae9593c5dfc3048f0ec5b4668/transformed/jetified-flipper-0.182.0/AndroidManifest.xml:16:5-76
+MERGED from [:react-native-community_netinfo] /Users/mohitgoel/Projects/Mobile/News1/News/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:8:5-76
+MERGED from [:react-native-community_netinfo] /Users/mohitgoel/Projects/Mobile/News1/News/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:8:5-76
 	android:name
 		ADDED from [com.facebook.flipper:flipper:0.182.0] /Users/mohitgoel/.gradle/caches/transforms-3/716e957ae9593c5dfc3048f0ec5b4668/transformed/jetified-flipper-0.182.0/AndroidManifest.xml:16:22-73
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [:react-native-community_netinfo] /Users/mohitgoel/Projects/Mobile/News1/News/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:7:5-79
+	android:name
+		ADDED from [:react-native-community_netinfo] /Users/mohitgoel/Projects/Mobile/News1/News/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:7:22-76
 meta-data#com.facebook.soloader.enabled
 ADDED from [com.facebook.soloader:soloader:0.10.5] /Users/mohitgoel/.gradle/caches/transforms-3/f74c5bcfd5d0e96262db6320044ac071/transformed/jetified-soloader-0.10.5/AndroidManifest.xml:12:9-14:37
 	android:value

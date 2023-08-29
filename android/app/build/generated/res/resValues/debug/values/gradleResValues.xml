@@ -7,5 +7,7 @@
     <integer name="react_native_dev_server_port">8081</integer>
     <!-- Value from default config. -->
     <integer name="react_native_inspector_proxy_port">8081</integer>
+    <!-- Value from default config. -->
+    <string name="API_KEY" translatable="false">"98889292f06547eeafb5f380a0880f0f"</string>
 
 </resources>
