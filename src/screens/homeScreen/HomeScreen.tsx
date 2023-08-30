@@ -43,7 +43,7 @@ const HomeScreen: React.FC = () => {
         }
         dripTimerRef.current = setInterval(() => {
             fetchNextBatch();
-        }, 100000);
+        }, 10000);
         return () => {
             if (dripTimerRef.current) {
                 clearInterval(dripTimerRef.current); // Clear the timer when the component unmounts
