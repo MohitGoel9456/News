@@ -28,11 +28,13 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 
 ## Step1: Create api key
 
-      1) Create api key on https://newsapi.org/
-      2) Create .env in the root folder and
+1) Create api key on https://newsapi.org/
+2) Create .env in the root folder and
+            
             ```bash
                   API_KEY="Add your key here"
             ```
+            
 ## Step2: Install all dependencies
 
    ```bash
