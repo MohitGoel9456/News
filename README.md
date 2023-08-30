@@ -25,20 +25,28 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 7) Deleting a headline should remove it from view, with the next headline appearing at the top of the list.
 
 ## Steps to set  up Project
-## Step1: Install all dependencies
+
+## Step1: Create api key
+
+      1) Create api key on https://newsapi.org/
+      2) Create .env in the root folder and
+            ```bash
+                  API_KEY="Add your key here"
+            ```
+## Step2: Install all dependencies
 
    ```bash
       # using npm
       npm start
    ```
 
-## Step2: Link libraries with pod for IOS
+## Step3: Link libraries with pod for IOS
 
    ```bash
       cd ios && pod install && cd ..
    ```
 
-## Step3: Start your Application
+## Step4: Start your Application
 
 Let Metro Bundler run in its own terminal. Open a new terminal from the root of your React Native project. Run the following command to start your Android or iOS app:
 
