@@ -11,7 +11,7 @@ import Swipeable from 'react-native-gesture-handler/Swipeable';
 import { RectButton, GestureHandlerRootView } from 'react-native-gesture-handler';
 import { useAppDispatch, useAppSelector } from "store/index";
 import { RootState } from "store/reducers";
-import { fetchNews, fetchTop5FromDB } from "store/actions/homeAction";
+import { fetchTop5FromDB, getNews } from "store/actions/homeAction";
 import { Article } from "types/news";
 
 import NewsItem from "@components/newsItem";
@@ -33,7 +33,7 @@ const HomeScreen: React.FC = () => {
     //used to fetch news from api for the very first time
     useEffect(() => {
         if (news?.articles.length == 0 || news.articles.length == 100)
-            dispatch(fetchNews());
+            dispatch(getNews());
     }, [news])
 
     //used to initiate set interval to fetch top 5 from DB

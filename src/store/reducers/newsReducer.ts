@@ -40,6 +40,14 @@ export const NewsReducer = (state = initialState, action: any): NewsState => {
                     articles: [...action.payload, ...state.news.articles]
                 }
             };
+        case HOME_ACTIONS.FETCH_NEWS_REQUEST_SUCCESS:
+            console.log("FETCH_NEWS_REQUEST_SUCCESS", action.payload);
+            return {
+                ...state,
+                loading: false,
+                error: '',
+                news: action.payload,
+            };
         default:
             return state;
     }
