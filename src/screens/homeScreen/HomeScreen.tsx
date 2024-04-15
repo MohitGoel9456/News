@@ -6,18 +6,21 @@ import {
     ActivityIndicator,
     StyleSheet,
     Animated,
+    TouchableOpacity,
 } from 'react-native';
 import Swipeable from 'react-native-gesture-handler/Swipeable';
 import { RectButton, GestureHandlerRootView } from 'react-native-gesture-handler';
 import { useAppDispatch, useAppSelector } from "store/index";
 import { RootState } from "store/reducers";
 import { fetchTop5FromDB, getNews } from "store/actions/homeAction";
+import { useNavigation } from "@react-navigation/native";
 import { Article } from "types/news";
 
 import NewsItem from "@components/newsItem";
 
 const HomeScreen: React.FC = () => {
 
+    const navigation = useNavigation();
     const [refreshing, setRefreshing] = useState(false);
 
     const dispatch = useAppDispatch();
@@ -106,7 +109,9 @@ const HomeScreen: React.FC = () => {
     const renderItem = ({ item }: { item: Article }) => {
         return (
             <Swipeable renderRightActions={renderRightActions}>
-                <NewsItem article={item} />
+                <TouchableOpacity onPress={() => navigation.navigate('Details')}>
+                    <NewsItem article={item} />
+                </TouchableOpacity>
             </Swipeable>
         )
     }
